@@ -4,6 +4,9 @@ interface NewTodoFormProps {
 	handleNewTodo: (newTodo: string) => void;
 }
 
+/**
+ * NewTodoForm component. Add a text input to allow create new todos
+ */
 function NewTodoForm({ handleNewTodo }: NewTodoFormProps) {
 	const [newTodo, setNewTodo] = useState<string>("");
 	const [error, setError] = useState<string>("");
@@ -15,7 +18,7 @@ function NewTodoForm({ handleNewTodo }: NewTodoFormProps) {
 			handleNewTodo(newTodo);
 			setNewTodo("");
 		} else {
-			setError("Please enter text before submitting a new todo");
+			setError("Please enter text before submitting a new task");
 			setTimeout(() => {
 				setError("");
 			}, 5000);

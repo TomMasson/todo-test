@@ -6,6 +6,9 @@ interface TodoItemProps {
 	toggleTodo: (todoId: string) => void;
 }
 
+/**
+ * Prints a todo item : a checkbox and its content
+ */
 function TodoItem({ todo, toggleTodo }: TodoItemProps) {
 	const [isChecked, setIsChecked] = useState<boolean>(todo.isDone);
 
